@@ -231,24 +231,3 @@ Competitive Exam Hierarchy
 
 UG & PG Stream Map
 
-(यदि चाहें तो मैं ये सभी charts आपके लिए बना दूँ।)
-
-🤝 Contribution Guidelines
-
-हर course अपनी अलग .md फाइल में हो
-
-Standard headings follow करें:
-
-Overview
-
-Eligibility
-
-Duration
-
-Scope
-
-Job Roles
-
-Study Roadmap
-
-Folder naming simple और clean रखें
