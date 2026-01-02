@@ -58,7 +58,7 @@ Follow these steps to run the project locally on your machine.
 
 1.  **Clone the Repository**
     ```bash
-    git clone [https://github.com/YOUR-USERNAME/STUDYGROUPHUB.git](https://github.com/YOUR-USERNAME/STUDYGROUPHUB.git)
+    git clone [https://github.com/premjeet1918/STUDYGROUPHUB.git](https://github.com/premjeet1918/STUDYGROUPHUB.git)
     cd STUDYGROUPHUB
     ```
 
