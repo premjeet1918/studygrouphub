@@ -7,9 +7,10 @@
     <!---------ADD ICON ------>
     <link rel="ICON" href="/FRONTAND/ IMG/LOGO.jpg" />
     <!--OUTPUT CSS -->
-    <link rel="stylesheet" href="../../output.css" />
+    <link rel="stylesheet" href="./output.css" />
     <!-----CSS ADD ------------->
-    <link rel="stylesheet" href="./dashboard.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="dashboard.css">
     <!-- Font Awesome for Icons -->
     <link
       rel="stylesheet"
@@ -258,7 +259,7 @@
   <!-- Background Watermark -->
   <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
     <h1
-      class="text-[80px] sm:text-[90px] md:text-[160px] font-stretch-110%     text-white/5 tracking-widest text-center select-none">
+      class="text-[80px] sm:text-[90px] md:text-[170px] leading-50 font-stretch-110%     text-white/5 tracking-widest text-center select-none">
       STUDY GROUP
     </h1>
   </div>
@@ -266,67 +267,93 @@
   <div class="relative max-w-7xl mx-auto px-6 py-14">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
       <div>
-        <h2 class="text-2xl font-bold text-white mb-3">
-          STUDY GROUP
-        </h2>
-        <p class="text-sm leading-relaxed">
+        <div class="flex items-center gap-5">
+          <div class="">
+            <img
+            src="../ IMG/LOGO.jpg"
+            alt="Logo"
+            class="w-10 h-10 md:w-12 md:h-12 rounded-2xl object-cover"
+            onerror="this.src='https://via.placeholder.com/48/2563eb/ffffff?text=LOGO'"
+          />
+          </div>
+          <div class="flex flex-col">
+            <span
+                class="text-xl md:text-2xl font-extrabold text-gray-800 tracking-tight leading-none group-hover:text-blue-700 transition"
+                >STUDY</span
+              >
+              <span
+                class="text-[10px] md:text-xs font-bold text-blue-600 tracking-[0.3em] leading-none uppercase"
+                >GROUP</span
+              >
+
+          </div>
+        </div>
+        <p class="text-[15px] leading-relaxed mt-3 text-white">
           Your one-shop destination for all educational
           resources ,exam preparations ,and careeer
           guidance</p>
         <br>
 
-        <ul class="flex items-center  gap-4">
-          <li><i class="fa-brands fa-facebook  "></i></li>
-          <li><i class="fa-brands fa-twitter"></i></li>
-          <li><i class="fa-brands fa-instagram"></i></li>
-          <li><i class="fa-brands fa-youtube"></i></li>
+        <ul class="flex items-center  gap-4 " id="icon">
+          <li ><i class="fa-brands fa-facebook text-blue-700" ></i></li>
+          <li ><i class="fa-brands fa-twitter text-blue-500"></i></li>
+          <li><i class="fa-brands fa-instagram text-pink-600"></i></li>
+          <li><i class="fa-brands fa-youtube text-red-600"></i></li>
         </ul>
       </div>
 
       <div>
-        <h3 class="text-lg font-semibold text-white mb-4">
+        <h3 class="text-lg font-[700] text-black mb-4">
           Government Exams
         </h3>
-        <ul class="space-y-2 text-sm">
-          <li><a class="hover:text-white transition" href="/">SCC Exams</a></li>
-          <li><a class="hover:text-white transition" href="/">Banking Exams</a></li>
-          <li><a class="hover:text-white transition" href="/">UPSC & State PCS</a></li>
-          <li><a class="hover:text-white transition" href="/">Railway Exams</a></li>
-          <li><a class="hover:text-white transition" href="/">Defence Exams</a></li>
+        <ul class="space-y-2 text-sm text-white">
+          <li><a class="hover:text-black transition" href="/">SCC Exams</a></li>
+          <li><a class="hover:text-black transition" href="/">Banking Exams</a></li>
+          <li><a class="hover:text-black transition" href="/">UPSC & State PCS</a></li>
+          <li><a class="hover:text-black transition" href="/">Railway Exams</a></li>
+          <li><a class="hover:text-black transition" href="/">Defence Exams</a></li>
         </ul>
       </div>
 
       <!-- Class Info -->
       <div>
-        <h3 class="text-lg font-semibold text-white mb-4">
+        <h3 class="text-lg font-[700] text-black mb-4">
           Skill Development
         </h3>
-        <ul class="space-y-2 text-sm">
-          <li><a class="hover:text-white transition" href="/">Coding & Programming</a></li>
-          <li><a class="hover:text-white transition" href="/">Digital Marketing</a></li>
-          <li><a class="hover:text-white transition" href="/">Graphic Design</a></li>
-          <li><a class="hover:text-white transition" href="/">Video Editing & VFX</a></li>
-          <li><a class="hover:text-white transition" href="/">Hotel Management</a></li>
+        <ul class="space-y-2 text-sm text-white">
+          <li><a class="hover:text-black transition" href="/">Coding & Programming</a></li>
+          <li><a class="hover:text-black transition" href="/">Digital Marketing</a></li>
+          <li><a class="hover:text-black transition" href="/">Graphic Design</a></li>
+          <li><a class="hover:text-black transition" href="/">Video Editing & VFX</a></li>
+          <li><a class="hover:text-black transition" href="/">Hotel Management</a></li>
         </ul>
       </div>
       <div>
-        <h3 class="text-lg font-semibold text-white mb-4">
+        <h3 class="text-lg font-[700] text-black mb-4">
           Quick Links
         </h3>
-        <ul class="space-y-2 text-sm">
-          <li><a class="hover:text-white transition" href="/">Coding & Programming</a></li>
-          <li><a class="hover:text-white transition" href="/">Privacy Policy</a></li>
-          <li><a class="hover:text-white transition" href="/">Terms & Conditions</a></li>
-          <li><a class="hover:text-white transition" href="/">Video Editing & VFX</a></li>
-          <li><a class="hover:text-white transition" href="/"><i
-                class="fa-solid fa-envelope gap-2"></i>supprt@studygroup.com</a></li>
+        <ul class="space-y-2 text-sm text-white">
+          <li><a class="hover:text-black transition" href="/">Coding & Programming</a></li>
+          <li><a class="hover:text-black transition" href="/">Privacy Policy</a></li>
+          <li><a class="hover:text-black transition" href="/">Terms & Conditions</a></li>
+          <li><a class="hover:text-black transition" href="/">Video Editing & VFX</a></li>
+          <li class="">
+            <a class="hover:text-black transition" href="/">
+            <div class="flex items-center">
+              <div class="mt-1">
+                <i
+                class="fa-solid fa-envelope  text-blue-600 text-[20px]"></i>
+              </div>
+              <div class=""><span class="ml-1" >supprt@studygroup.com</span></div>
+            </div>
+            </a></li>
         </ul>
 
       </div>
     </div>
     <!-- Bottom -->
-    <div class="border-t border-white/10 mt-12 pt-6 text-center text-sm text-white">
-      © 2026 Study Group All rights reserved Designed with for Students
+    <div class="border-t border-white/10 mt-12 pt-6 text-center text-[15px] text-black">
+      © 2024 Study Group All rights reserved Designed with for Students
     </div>
 
   </div>
