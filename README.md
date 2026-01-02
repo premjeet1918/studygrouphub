@@ -50,6 +50,7 @@ To create a *single digital ecosystem* where students can:
 ---
 
 ## 📁 Project Folder Structure
+STUDYGROUPHUB/ ├── BACKEND/ │   ├── API/ │   └── DATABASE/ │ ├── FRONTAND/ │   ├── IMG/ │   ├── ABOUT/ │   ├── ADMIN-TEAM/ │   ├── APK/ │   ├── BTECH/ │   ├── CLASS7TH-8TH/ │   ├── CONTACT/ │   ├── COURSES/ │   ├── DASHBOARD/ │   ├── DEVLOPER-TEAM/ │   ├── DIPLOMA/ │   ├── FEEDBACK/ │   ├── LOGIN/ │   └── STUDYGROUP-COMMUNITY/ │ ├── node_modules/ ├── output.css ├── style.css ├── tailwind.config.js ├── package.json ├── package-lock.json └── README.md
 
 
 
