@@ -74,3 +74,11 @@
     font-size: 0.75rem; /* 12px */
   }
 }
+
+
+
+/* Footer start */
+#icon li{
+border: 1px solid rgb(116, 114, 114) ; display: flex; text-align: center; padding: 5px;border-radius: 50%; background-color: rgb(252, 251, 251);
+}
+/* Footer end */
