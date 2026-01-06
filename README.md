@@ -120,11 +120,11 @@ STUDYGROUPHUB/
 | *Raj Omer* | Admin Panel |
 | *Sidharth Avasthi* | Admin Panel |
 | *Saloni Gupta* | Login & Authentication |
-| *Vishal* | APK Section |
+|  | APK Section |
 | *Shivam* | About Page |
 | *Raman* | Study Group Community |
-| *Shenha Rastogi* | Feedback System |
-| *Deepti Prajapati* | Contact-us |
+|  | Feedback System |
+|  | Contact-us |
 
 ---
 
