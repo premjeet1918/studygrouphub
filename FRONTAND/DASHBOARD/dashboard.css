@@ -35,6 +35,12 @@
 .animate-fade-in-up {
   animation: fadeInUp 0.5s ease-out;
 }
+ /* Professional Dot Grid Background - Soft on Eyes */
+          .bg-dot-pattern {
+            background-color: #f8fafc; /* Slate 50 */
+            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+            background-size: 32px 32px;
+          }
 /* Responsive */
 @media (min-width: 768px) {
   /* Show desktop navigation */
