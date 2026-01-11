@@ -116,10 +116,10 @@ STUDYGROUPHUB/
 |------------|---------------|
 | *Premjeet* | Dashboard Development |
 | *Surendar* | Dashboard Development |
-| *Sandeep* | Developer Team Module |
+|  | Developer Team Module |
 |  | Admin Team |
 | | Admin Team |
-| *Saloni Gupta* | Login & Authentication |
+|  | Login & Authentication |
 |  | APK Section |
 | *Shivam* | About Page |
 |  | Study Group Community |
