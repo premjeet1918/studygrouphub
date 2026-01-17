@@ -10,8 +10,9 @@
     <!--OUTPUT CSS -->
     <link rel="stylesheet" href="./output.css" />
     <!-----CSS ADD ------------->
-   
+
     <link rel="stylesheet" href="feedback.css" />
+
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <!-- Google Fonts -->
@@ -21,6 +22,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
@@ -105,7 +107,7 @@
                         class="flex items-center gap-1 px-2 py-2 font-medium transition-all rounded-lg lg:px-4 hover:bg-blue-50 hover:text-blue-600 active:bg-blue-100 active:scale-95 md:text-xs lg:text-sm whitespace-nowrap">
                         <i class="fas fa-address-book"></i> CONTACT
                     </a>
-                  
+
                     <a href="#login"
                         class="flex items-center gap-2 px-3 py-2 ml-2 text-white transition-all bg-blue-600 rounded-full shadow-lg lg:ml-4 lg:px-6 hover:bg-blue-700 active:bg-blue-800 active:scale-95 md:text-xs lg:text-sm whitespace-nowrap">
                         <i class="fas fa-sign-in-alt"></i> LOGIN
@@ -167,7 +169,7 @@
                     class="block px-3 py-3 font-medium transition-colors border-b rounded-md hover:bg-blue-50 hover:text-blue-600 active:bg-blue-100 border-gray-50">
                     <i class="w-8 text-center fas fa-address-book"></i> Contact
                 </a>
-               
+
 
                 <a href="#login"
                     class="block px-3 py-3 mx-3 mt-4 font-bold text-center text-white transition-transform bg-blue-600 rounded-md shadow-md active:bg-blue-800 active:scale-95">
@@ -176,9 +178,64 @@
             </div>
         </div>
     </nav>
-<!---------ADD FEED BACK -->
-    
-   
+    <!---------ADD FEED BACK -->
+    <div class="main">
+
+        <div class="header">
+
+            <div class="para">
+                <h1>We Value Your Opinion</h1>
+                <p>Help us make StudyGroupHub better for every student.</p>
+            </div>
+        </div>
+
+        <div class="center">
+            <div class="detail">
+                <div class="name">
+                    <label for="studentName">Your Name</label>
+                    <input type="text" id="studentName" placeholder="Student Name">
+                </div>
+                <div class="class">
+                    <label for="targetClass">Target</label>
+                    <input type="text" id="targetClass" placeholder="e.g. Class 12, JEE">
+                </div>
+            </div>
+
+            <div class="select">
+                <label>What is this regarding?</label>
+                <select name="regarding">
+                    <option value="Select a Category" selected disabled>Select a Category</option>
+                    <option value="Admission">Admission</option>
+                    <option value="Courses">Courses</option>
+                    <option value="Fees">Fees</option>
+                    <option value="Exam">Exam</option>
+                </select>
+            </div>
+
+            <div class="stars">
+                <div class="p1">Rate Content Quality</div>
+                <span class="s">★</span>
+                <span class="s">★</span>
+                <span class="s">★</span>
+                <span class="s">★</span>
+                <span class="s">★</span>
+            </div>
+
+            <div class="text">
+                <label>Message</label>
+                <textarea placeholder="Tell us more..."></textarea>
+            </div>
+
+            <div class="button">
+                <button type="button">Submit Feedback</button>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
     <!-----footer start --------->
     <footer class="w-full text-gray-300 bg-gray-800">
         <div class="relative px-6 mx-auto max-w-8xl py-14">

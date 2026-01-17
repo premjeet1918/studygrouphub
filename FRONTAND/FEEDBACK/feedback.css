@@ -1,90 +1,266 @@
 @import "tailwindcss";
 
 
-/* 1. CUSTOM SCROLLBAR  */
-
 ::-webkit-scrollbar {
-  width: 8px;
+    width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+    background: #f1f1f1;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #94a3b8;
-  border-radius: 4px;
-}
-/* Tailwind slate-500 color match */
-::-webkit-scrollbar-thumb:hover {
-  background: #64748b;
+    background: #94a3b8;
+    border-radius: 4px;
 }
 
-/* 2. ANIMATIONS                */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
+
+/* 2. ANIMATIONS */
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .animate-fade-in-up {
-  animation: fadeInUp 0.5s ease-out;
+    animation: fadeInUp 0.5s ease-out;
 }
- /* Professional Dot Grid Background - Soft on Eyes */
-          .bg-dot-pattern {
-            background-color: #f8fafc; /* Slate 50 */
-            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
-            background-size: 32px 32px;
-          }
-/* Responsive */
+
+
+.bg-dot-pattern {
+    background-color: #f8fafc;
+    background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+    background-size: 32px 32px;
+}
+
+
 @media (min-width: 768px) {
-  /* Show desktop navigation */
-  .lg\:flex {
-    display: flex !important;
-  }
+   
+    .lg\:flex {
+        display: flex !important;
+    }
 
-  /* Hide mobile menu button */
-  #mobile-menu-btn {
-    display: none;
-  }
+ 
+    #mobile-menu-btn {
+        display: none;
+    }
 
-  /* Hide mobile menu */
-  #mobile-menu {
-    display: none !important;
-  }
+    /* Hide mobile menu */
+    #mobile-menu {
+        display: none !important;
+    }
 
-  /* Ensure navigation items are visible and properly spaced */
-  .flex.items-center.space-x-1 {
-    display: flex !important;
-    flex-wrap: nowrap;
-    white-space: nowrap;
-    overflow-x: visible;
-  }
+   
+    .flex.items-center.space-x-1 {
+        display: flex !important;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        overflow-x: visible;
+    }
 
-  /* Adjust font sizes for better fit */
-  .px-4.py-2 {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-    font-size: 0.9rem; /* 12px */
-  }
+  
+    .px-4.py-2 {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+        font-size: 0.9rem; 
+    }
 
-  /* Make sure login button is properly sized */
-  .px-6.py-2 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    font-size: 0.75rem; /* 12px */
-  }
+
+    .px-6.py-2 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        font-size: 0.75rem; 
+    }
+}
+
+/* 5. FOOTER ICONS */
+#icon li {
+    border: 1px solid rgb(116, 114, 114);
+    display: flex;
+    text-align: center;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: rgb(252, 251, 251);
 }
 
 
 
-/* Footer start */
-#icon li{
-border: 1px solid rgb(116, 114, 114) ; display: flex; text-align: center; padding: 5px;border-radius: 50%; background-color: rgb(252, 251, 251);
+
+.main {
+    font-family: "Poppins", sans-serif;
+    background-color: rgb(240, 244, 255);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;     
+    justify-content: center; 
+    padding: 40px 20px;
 }
-/* Footer end */
+
+
+ .header {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+ .head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 3.5rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+ .material-symbols-outlined {
+    color: rgb(98, 47, 145);
+    margin-right: 0.5rem;
+    font-size: 1.5rem;
+}
+
+ .head h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1f2937; 
+    margin: 0;
+}
+
+ .para {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+ .para h1 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #111827; 
+    margin-bottom: 0.5rem;
+}
+ .para p {
+    font-size: 0.9rem;
+    color: #4b5563; 
+}
+
+
+ .center {
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    border: 4px solid white;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+
+ .detail {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 1rem;
+}
+
+ .name,
+.main .class {
+    width: 48%;
+}
+
+ label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #374151;
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+input,
+ select,
+ textarea {
+    width: 100%;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-size: 0.85rem;
+    outline: none;
+    transition: border-color 0.2s;
+    background-color: #fff;
+}
+ input:focus,
+ select:focus,
+textarea:focus {
+    border-color: blue;
+}
+
+
+ input {
+    height: 38px;
+}
+
+ select {
+    height: 38px;
+}
+
+ textarea {
+    height: 100px;
+    resize: none;
+}
+
+
+ .select,
+ .text,
+ .button {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.stars {
+    margin-bottom: 1rem;
+}
+
+ .p1 {
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+ .s {
+    color: #d1d5db;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+ .s:hover,
+ .s.active {
+    color: #fbbf24;
+}
+
+
+ button {
+    height: 45px;
+    width: 100%;
+    background-color: #0b71d6; 
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-size: 0.95rem;
+}
+
+ button:hover {
+    background-color: #1d4ed8;
+}
