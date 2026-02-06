@@ -1,7 +1,11 @@
 import React from "react";
 import { Code, BookOpen, Lightbulb } from "lucide-react";
 import BgImage from "../assets/BG834.png";
-import StudentImage from "../assets/NOCH983.png";
+import StudentImage from "../assets/NOCH983.png"
+
+
+
+
 
 
 export default function Hero() {

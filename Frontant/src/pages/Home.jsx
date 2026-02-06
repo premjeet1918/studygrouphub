@@ -1,26 +1,27 @@
-import Hero from "../components/Hero";
-import Card from "../components/Card";
-import Community from "../components/Community";
-import AdmitCards from "../components/AdmitCards";
-import NoticesFormsUpdates from "../components/NoticesFormsUpdates";
-import CoursesCategories from "../components/CoursesCategories";
-import EngineeringTeaching from "../components/EngineeringTeaching";
-import MedicalHealth from "../components/MedicalHealth";
+import Hero from "../components/Hero"
 
+import Card from "../components/HOMEDASHBOARD/Card";
+import Community from "../components/HOMEDASHBOARD/Community";
+import AdmitCards from "../components/HOMEDASHBOARD/AdmitCards";
+import NoticesFormsUpdates from "../components/HOMEDASHBOARD/NoticesFormsUpdates";
+import CoursesCategories from "../components/HOMEDASHBOARD/CoursesCategories";
+import EngineeringTeaching from "../components/HOMEDASHBOARD/EngineeringTeaching";
+import MedicalHealth from "../components/HOMEDASHBOARD/MedicalHealth";
+import Adminteam from "./Team/Adminteam";
+import Devloperteam from "./Team/Devloperteam";
 
 export default function Home() {
-return (
-<>
-<Hero />
-<Community/>
-<AdmitCards/>
-<NoticesFormsUpdates/>
+  return (
+    <>
+      <Hero />
+      <Community />
+      <AdmitCards />
+      <NoticesFormsUpdates />
 
-<CoursesCategories/>
-<EngineeringTeaching/>
-<MedicalHealth/>
-
-
-</>
-);
+      <CoursesCategories />
+      <EngineeringTeaching />
+      <MedicalHealth />
+     
+    </>
+  );
 }
