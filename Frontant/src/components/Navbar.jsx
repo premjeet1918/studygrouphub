@@ -140,10 +140,13 @@ export default function  Navbar() {
                 COURSES
               </a>
 
-              <a className="flex items-center gap-1 px-3 py-2 rounded-lg hover:bg-blue-50 hover:text-blue-600 transition">
+              <NavLink
+                to="/contact"
+                className="flex items-center gap-1 px-3 py-2 rounded-lg hover:bg-blue-50 hover:text-blue-600 transition"
+              >
                 <FaAddressBook />
                 CONTACT
-              </a>
+              </NavLink>
 
               {/* Login */}
               <button className="ml-2 bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition flex items-center gap-2">
