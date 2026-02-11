@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Logo from "../assets/LOGO.JPG";
+import { NavLink, useNavigate } from "react-router-dom";
 
-import { NavLink } from "react-router-dom";
 import {
   FaEnvelope,
   FaFacebookF,
@@ -17,104 +17,112 @@ import {
   FaBookOpen,
   FaAddressBook,
   FaSignInAlt,
+  FaAndroid,
 } from "react-icons/fa";
 
-import { FaAndroid } from "react-icons/fa";
-
-export default function  Navbar() {
+export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [teamOpen, setTeamOpen] = useState(false);
   const [mobileTeamOpen, setMobileTeamOpen] = useState(false);
 
+  const navigate = useNavigate();
+
+  const navLinkClass =
+    "flex items-center gap-2 px-4 py-2 rounded-xl font-medium transition-all duration-300 hover:text-blue-600 hover:bg-blue-50";
+
+  const activeClass =
+    "text-blue-600 bg-blue-50 shadow-sm";
+
   return (
     <>
-      {/* Top Bar */}
-      <div className="bg-gray-800 text-white text-xs">
+      {/* TOP BAR */}
+      <div className="bg-gradient-to-r from-gray-900 to-gray-800 text-white text-xs hidden md:block">
         <div className="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center">
-          {/* Email */}
-          <div className="flex items-center gap-2 hover:text-blue-400 cursor-pointer">
+
+          <div className="flex items-center gap-2 hover:text-blue-400 cursor-pointer transition">
             <FaEnvelope />
-            <span className="hidden sm:block">help@studygrouphub.com</span>
-            <span className="sm:hidden">Email Us</span>
+            help@studygrouphub.com
           </div>
 
-          {/* Social Icons */}
-          <div className="flex items-center gap-4">
-            <FaFacebookF className="hover:text-blue-400 cursor-pointer transition" />
-
-            <FaTwitter className="hover:text-blue-400 cursor-pointer transition" />
-
-            <FaInstagram className="hover:text-blue-400 cursor-pointer transition" />
-
-            <FaLinkedinIn className="hover:text-blue-400 cursor-pointer transition" />
+          <div className="flex gap-4 text-sm">
+            <FaFacebookF className="cursor-pointer hover:text-blue-500 hover:scale-110 transition" />
+            <FaTwitter className="cursor-pointer hover:text-blue-400 hover:scale-110 transition" />
+            <FaInstagram className="cursor-pointer hover:text-pink-500 hover:scale-110 transition" />
+            <FaLinkedinIn className="cursor-pointer hover:text-blue-600 hover:scale-110 transition" />
           </div>
+
         </div>
       </div>
 
-      {/* Navbar */}
-      <nav className="sticky top-0 z-50 bg-white shadow-md">
+      {/* NAVBAR */}
+      <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-gray-200 shadow-sm">
+
         <div className="max-w-7xl mx-auto px-4">
-          <div className="flex justify-between items-center h-16 md:h-20">
-            {/* Logo */}
-            <div className="flex items-center gap-2 cursor-pointer">
+
+          <div className="flex justify-between items-center h-16 lg:h-20">
+
+            {/* LOGO */}
+            <div
+              onClick={() => navigate("/")}
+              className="flex items-center gap-3 cursor-pointer group"
+            >
+
               <img
                 src={Logo}
-                alt="Logo"
-                className="w-10 h-10 md:w-12 md:h-12 rounded-xl"
+                className="w-11 h-11 lg:w-12 lg:h-12 rounded-xl shadow-md group-hover:scale-110 transition"
               />
 
               <div>
-                <h1 className="text-lg md:text-xl font-bold text-gray-800 leading-none">
+                <h1 className="text-lg lg:text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
                   STUDY
                 </h1>
 
-                <p className="text-blue-600 text-[10px] md:text-xs tracking-[0.3em] font-bold">
-                  GROUP
+                <p className="text-[10px] lg:text-xs font-bold tracking-[0.35em] text-gray-500">
+                  GROUP HUB
                 </p>
               </div>
+
             </div>
 
-            {/* Desktop Menu */}
-            <div className="hidden md:flex items-center gap-2 text-sm font-medium">
+            {/* DESKTOP MENU */}
+            <div className="hidden lg:flex items-center gap-1 text-sm">
+
               <NavLink
                 to="/"
                 className={({ isActive }) =>
-                  `flex items-center gap-1 px-3 py-2 rounded-lg duration-200 transition ${
-                    isActive
-                      ? "text-orange-700 font-bold bg-blue-50"
-                      : "text-black"
-                  } hover:bg-blue-50 hover:text-blue-600`
+                  `${navLinkClass} ${isActive ? activeClass : ""}`
                 }
               >
-                <FaHome className="text-xl" />
-                <span>HOME</span>
+                <FaHome />
+                Home
               </NavLink>
 
               <NavLink
                 to="/about"
                 className={({ isActive }) =>
-                  `flex items-center gap-2 py-2 pr-4 pl-3 duration-200 ${
-                    isActive ? "text-blue-600   font-bold" : "text-gray-700"
-                  } border-b  flex items-center gap-1 px-3 py-2 rounded-lg hover:bg-blue-50  lg:border-0 hover:text-blue-600 `
+                  `${navLinkClass} ${isActive ? activeClass : ""}`
                 }
               >
-                <FaInfoCircle className="text-lg" />
-                <span>About</span>
+                <FaInfoCircle />
+                About
               </NavLink>
 
-              <a className="flex items-center gap-1 px-3 py-2 rounded-lg hover:bg-blue-50 hover:text-blue-600 transition">
+              {/* APK */}
+              <button className="flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-green-500 to-emerald-500 text-white hover:scale-105 transition shadow-md">
                 <FaAndroid />
                 APK
-              </a>
+              </button>
 
-              {/* Team Dropdown */}
-              <div className="relative">
-                <button
-                  onClick={() => setTeamOpen(!teamOpen)}
-                  className="flex items-center gap-1 px-3 py-2 rounded-lg hover:bg-blue-50 hover:text-blue-600 transition"
-                >
+              {/* TEAM */}
+              <div
+                className="relative"
+                onMouseEnter={() => setTeamOpen(true)}
+                onMouseLeave={() => setTeamOpen(false)}
+              >
+
+                <button className={navLinkClass}>
                   <FaUsers />
-                  TEAM
+                  Team
                   <FaChevronDown
                     className={`text-xs transition ${
                       teamOpen ? "rotate-180" : ""
@@ -122,92 +130,136 @@ export default function  Navbar() {
                   />
                 </button>
 
-                {teamOpen && (
-                  <div className="absolute top-12 left-0 bg-white shadow-lg rounded-lg w-48 py-2 border">
-                    <a className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600 transition">
-                      Developer Team
-                    </a>
+                <div
+                  className={`absolute top-12 left-0 w-52 bg-white shadow-xl rounded-xl border transition-all duration-300 ${
+                    teamOpen
+                      ? "opacity-100 visible translate-y-0"
+                      : "opacity-0 invisible -translate-y-2"
+                  }`}
+                >
 
-                    <a className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600 transition">
+                  <div className="p-2 space-y-1">
+
+                    <div className="px-4 py-2 rounded-lg hover:bg-blue-50 cursor-pointer">
+                      Developer Team
+                    </div>
+
+                    <div className="px-4 py-2 rounded-lg hover:bg-blue-50 cursor-pointer">
                       Admin Team
-                    </a>
+                    </div>
+
                   </div>
-                )}
+
+                </div>
+
               </div>
 
-              <a className="flex items-center gap-1 px-3 py-2 rounded-lg hover:bg-blue-50 hover:text-blue-600 transition">
+              <NavLink
+                to="/courses"
+                className={({ isActive }) =>
+                  `${navLinkClass} ${isActive ? activeClass : ""}`
+                }
+              >
                 <FaBookOpen />
-                COURSES
-              </a>
+                Courses
+              </NavLink>
 
               <NavLink
                 to="/contact"
-                className="flex items-center gap-1 px-3 py-2 rounded-lg hover:bg-blue-50 hover:text-blue-600 transition"
+                className={({ isActive }) =>
+                  `${navLinkClass} ${isActive ? activeClass : ""}`
+                }
               >
                 <FaAddressBook />
-                CONTACT
+                Contact
               </NavLink>
 
-              {/* Login */}
-              <button className="ml-2 bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition flex items-center gap-2">
+              {/* LOGIN */}
+              <button className="ml-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-5 py-2 rounded-full hover:scale-105 hover:shadow-lg transition flex items-center gap-2">
                 <FaSignInAlt />
-                LOGIN
+                Login
               </button>
+
             </div>
 
-            {/* Mobile Button */}
+            {/* MOBILE BUTTON */}
             <button
-              className="md:hidden text-xl"
+              className="lg:hidden text-2xl p-2 rounded-lg hover:bg-gray-100 transition"
               onClick={() => setMobileOpen(!mobileOpen)}
             >
               {mobileOpen ? <FaTimes /> : <FaBars />}
             </button>
+
           </div>
+
         </div>
 
-        {/* Mobile Menu */}
-        {mobileOpen && (
-          <div className="md:hidden bg-white shadow-lg border-t">
-            <div className="px-4 py-3 space-y-2">
-              <a className="block py-2 hover:text-blue-600">HOME</a>
+        {/* MOBILE MENU */}
+        <div
+          className={`lg:hidden bg-white border-t shadow-lg transition-all duration-300 ${
+            mobileOpen ? "max-h-[600px] py-4" : "max-h-0"
+          } overflow-hidden`}
+        >
 
-              <a className="block py-2 hover:text-blue-600">ABOUT</a>
+          <div className="px-4 space-y-2">
 
-              <a className="block py-2 hover:text-blue-600">APK</a>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                `${navLinkClass} w-full ${
+                  isActive ? activeClass : ""
+                }`
+              }
+            >
+              Home
+            </NavLink>
 
-              {/* Mobile Team */}
-              <div>
-                <button
-                  onClick={() => setMobileTeamOpen(!mobileTeamOpen)}
-                  className="w-full text-left py-2 flex justify-between"
-                >
-                  TEAM
-                  <FaChevronDown
-                    className={`transition ${
-                      mobileTeamOpen ? "rotate-180" : ""
-                    }`}
-                  />
-                </button>
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                `${navLinkClass} w-full ${
+                  isActive ? activeClass : ""
+                }`
+              }
+            >
+              About
+            </NavLink>
 
-                {mobileTeamOpen && (
-                  <div className="pl-4 space-y-2">
-                    <div className="py-1">Developer Team</div>
+            <button className="flex items-center gap-2 px-4 py-2 rounded-xl bg-green-500 text-white w-full">
+              <FaAndroid />
+              Download APK
+            </button>
 
-                    <div className="py-1">Admin Team</div>
-                  </div>
-                )}
-              </div>
+            <NavLink
+              to="/courses"
+              className={({ isActive }) =>
+                `${navLinkClass} w-full ${
+                  isActive ? activeClass : ""
+                }`
+              }
+            >
+              Courses
+            </NavLink>
 
-              <a className="block py-2 hover:text-blue-600">COURSES</a>
+            <NavLink
+              to="/contact"
+              className={({ isActive }) =>
+                `${navLinkClass} w-full ${
+                  isActive ? activeClass : ""
+                }`
+              }
+            >
+              Contact
+            </NavLink>
 
-              <a className="block py-2 hover:text-blue-600">CONTACT</a>
+            <button className="w-full mt-2 bg-blue-600 text-white py-2 rounded-full">
+              Login
+            </button>
 
-              <button className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
-                LOGIN
-              </button>
-            </div>
           </div>
-        )}
+
+        </div>
+
       </nav>
     </>
   );
