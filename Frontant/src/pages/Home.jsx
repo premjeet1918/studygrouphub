@@ -9,6 +9,7 @@ import EngineeringTeaching from "../components/HOMEDASHBOARD/EngineeringTeaching
 import MedicalHealth from "../components/HOMEDASHBOARD/MedicalHealth";
 import Adminteam from "./Team/Adminteam";
 import Devloperteam from "./Team/Devloperteam";
+import CompetitiveExam from "../components/HOMEDASHBOARD/CompetitiveExam";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <CoursesCategories />
       <EngineeringTeaching />
       <MedicalHealth />
+      <CompetitiveExam/>
      
     </>
   );

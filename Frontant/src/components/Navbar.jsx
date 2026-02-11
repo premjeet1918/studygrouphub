@@ -1,6 +1,9 @@
 import { useState } from "react";
 import Logo from "../assets/LOGO.JPG";
 import { NavLink, useNavigate } from "react-router-dom";
+import { FaUserShield, FaLaptopCode } from "react-icons/fa";
+import Adminteam from "../pages/Team/Adminteam";
+import Devloperteam from "../pages/Team/Devloperteam";
 
 import {
   FaEnvelope,
@@ -21,6 +24,7 @@ import {
 } from "react-icons/fa";
 
 export default function Navbar() {
+  
   const [mobileOpen, setMobileOpen] = useState(false);
   const [teamOpen, setTeamOpen] = useState(false);
   const [mobileTeamOpen, setMobileTeamOpen] = useState(false);
@@ -30,15 +34,13 @@ export default function Navbar() {
   const navLinkClass =
     "flex items-center gap-2 px-4 py-2 rounded-xl font-medium transition-all duration-300 hover:text-blue-600 hover:bg-blue-50";
 
-  const activeClass =
-    "text-blue-600 bg-blue-50 shadow-sm";
+  const activeClass = "text-blue-600 bg-blue-50 shadow-sm";
 
   return (
     <>
       {/* TOP BAR */}
-      <div className="bg-gradient-to-r from-gray-900 to-gray-800 text-white text-xs hidden md:block">
+      <div className="bg-gradient-to-r from-gray-800 to-gray-800 text-white text-xs hidden md:block">
         <div className="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center">
-
           <div className="flex items-center gap-2 hover:text-blue-400 cursor-pointer transition">
             <FaEnvelope />
             help@studygrouphub.com
@@ -50,23 +52,18 @@ export default function Navbar() {
             <FaInstagram className="cursor-pointer hover:text-pink-500 hover:scale-110 transition" />
             <FaLinkedinIn className="cursor-pointer hover:text-blue-600 hover:scale-110 transition" />
           </div>
-
         </div>
       </div>
 
       {/* NAVBAR */}
       <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-gray-200 shadow-sm">
-
         <div className="max-w-7xl mx-auto px-4">
-
           <div className="flex justify-between items-center h-16 lg:h-20">
-
             {/* LOGO */}
             <div
               onClick={() => navigate("/")}
               className="flex items-center gap-3 cursor-pointer group"
             >
-
               <img
                 src={Logo}
                 className="w-11 h-11 lg:w-12 lg:h-12 rounded-xl shadow-md group-hover:scale-110 transition"
@@ -81,12 +78,10 @@ export default function Navbar() {
                   GROUP HUB
                 </p>
               </div>
-
             </div>
 
             {/* DESKTOP MENU */}
             <div className="hidden lg:flex items-center gap-1 text-sm">
-
               <NavLink
                 to="/"
                 className={({ isActive }) =>
@@ -104,11 +99,11 @@ export default function Navbar() {
                 }
               >
                 <FaInfoCircle />
-                About
+                ABOUT
               </NavLink>
 
               {/* APK */}
-              <button className="flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-green-500 to-emerald-500 text-white hover:scale-105 transition shadow-md">
+              <button className="flex items-center gap-2 px-4 py-2 rounded-xl cursor-pointer   hover:scale-105 transition ">
                 <FaAndroid />
                 APK
               </button>
@@ -119,10 +114,9 @@ export default function Navbar() {
                 onMouseEnter={() => setTeamOpen(true)}
                 onMouseLeave={() => setTeamOpen(false)}
               >
-
                 <button className={navLinkClass}>
                   <FaUsers />
-                  Team
+                  TEAM
                   <FaChevronDown
                     className={`text-xs transition ${
                       teamOpen ? "rotate-180" : ""
@@ -137,21 +131,30 @@ export default function Navbar() {
                       : "opacity-0 invisible -translate-y-2"
                   }`}
                 >
-
                   <div className="p-2 space-y-1">
+                    <NavLink
+                      to="/Devloperteam"
+                      className={({ isActive }) =>
+                        `flex items-center gap-3 px-4 py-2 rounded-lg cursor-pointer transition-all duration-200 
+                       ${isActive ? "bg-blue-100 text-blue-600" : "hover:bg-blue-50 hover:text-blue-600"}`
+                      }
+                    >
+                      <FaLaptopCode />
+                      <span>DEVLOPER TEAM </span>
+                    </NavLink>
 
-                    <div className="px-4 py-2 rounded-lg hover:bg-blue-50 cursor-pointer">
-                      Developer Team
-                    </div>
-
-                    <div className="px-4 py-2 rounded-lg hover:bg-blue-50 cursor-pointer">
-                      Admin Team
-                    </div>
-
+                    <NavLink
+                      to="/Adminteam"
+                      className={({ isActive }) =>
+                        `flex items-center gap-3 px-4 py-2 rounded-lg cursor-pointer transition-all duration-200 
+                          ${isActive ? "bg-blue-100 text-blue-600" : "hover:bg-blue-50 hover:text-blue-600"}`
+                      }
+                    >
+                      <FaUserShield />
+                      <span>ADMIN TEAM</span>
+                    </NavLink>
                   </div>
-
                 </div>
-
               </div>
 
               <NavLink
@@ -161,7 +164,7 @@ export default function Navbar() {
                 }
               >
                 <FaBookOpen />
-                Courses
+                COURSES
               </NavLink>
 
               <NavLink
@@ -171,15 +174,14 @@ export default function Navbar() {
                 }
               >
                 <FaAddressBook />
-                Contact
+                CONTACT
               </NavLink>
 
               {/* LOGIN */}
               <button className="ml-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-5 py-2 rounded-full hover:scale-105 hover:shadow-lg transition flex items-center gap-2">
                 <FaSignInAlt />
-                Login
+                LOGIN
               </button>
-
             </div>
 
             {/* MOBILE BUTTON */}
@@ -189,9 +191,7 @@ export default function Navbar() {
             >
               {mobileOpen ? <FaTimes /> : <FaBars />}
             </button>
-
           </div>
-
         </div>
 
         {/* MOBILE MENU */}
@@ -200,15 +200,11 @@ export default function Navbar() {
             mobileOpen ? "max-h-[600px] py-4" : "max-h-0"
           } overflow-hidden`}
         >
-
           <div className="px-4 space-y-2">
-
             <NavLink
               to="/"
               className={({ isActive }) =>
-                `${navLinkClass} w-full ${
-                  isActive ? activeClass : ""
-                }`
+                `${navLinkClass} w-full ${isActive ? activeClass : ""}`
               }
             >
               Home
@@ -217,9 +213,7 @@ export default function Navbar() {
             <NavLink
               to="/about"
               className={({ isActive }) =>
-                `${navLinkClass} w-full ${
-                  isActive ? activeClass : ""
-                }`
+                `${navLinkClass} w-full ${isActive ? activeClass : ""}`
               }
             >
               About
@@ -233,9 +227,7 @@ export default function Navbar() {
             <NavLink
               to="/courses"
               className={({ isActive }) =>
-                `${navLinkClass} w-full ${
-                  isActive ? activeClass : ""
-                }`
+                `${navLinkClass} w-full ${isActive ? activeClass : ""}`
               }
             >
               Courses
@@ -244,9 +236,7 @@ export default function Navbar() {
             <NavLink
               to="/contact"
               className={({ isActive }) =>
-                `${navLinkClass} w-full ${
-                  isActive ? activeClass : ""
-                }`
+                `${navLinkClass} w-full ${isActive ? activeClass : ""}`
               }
             >
               Contact
@@ -255,11 +245,8 @@ export default function Navbar() {
             <button className="w-full mt-2 bg-blue-600 text-white py-2 rounded-full">
               Login
             </button>
-
           </div>
-
         </div>
-
       </nav>
     </>
   );
