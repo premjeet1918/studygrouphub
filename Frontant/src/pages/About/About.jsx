@@ -1,29 +1,27 @@
 import React from "react";
 import { FaUsers, FaBookOpen, FaGraduationCap, FaGlobe } from "react-icons/fa";
+import OurJourney from "./OurJourney";
 
 export default function About() {
   return (
     <section className="relative py-16 sm:py-20 px-4 bg-gradient-to-br from-white via-blue-50 to-indigo-50 overflow-hidden">
-
       {/* background blur */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-blue-200 rounded-full blur-3xl opacity-30"></div>
       <div className="absolute bottom-0 right-0 w-72 h-72 bg-indigo-200 rounded-full blur-3xl opacity-30"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-
         {/* HERO SECTION */}
         <div className="grid md:grid-cols-2 gap-10 items-center mb-16">
-
           {/* LEFT */}
           <div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">
-              About <span className="text-blue-600">StudyGroupHub</span>
+              <span className="text-blue-600"> Who We Are</span>
             </h1>
 
             <p className="mt-4 text-gray-600 leading-relaxed">
-              StudyGroupHub is a platform designed to help students learn,
-              grow, and succeed together. We provide notes, resources, and
-              study groups to improve learning and collaboration.
+              StudyGroupHub is a platform designed to help students learn, grow,
+              and succeed together. We provide notes, resources, and study
+              groups to improve learning and collaboration.
             </p>
 
             <p className="mt-4 text-gray-600 leading-relaxed">
@@ -33,6 +31,9 @@ export default function About() {
 
             <button className="mt-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-xl font-semibold hover:scale-105 hover:shadow-xl transition">
               Join Our Community
+            </button>
+            <button className="mt-6 bg-gradient-to-r  text-blue-500 border border-blue-500 px-6 py-3 m-7 rounded-xl font-semibold hover:scale-105 hover:shadow-xl transition">
+              Meet Our Team
             </button>
           </div>
 
@@ -51,12 +52,23 @@ export default function About() {
               </p>
             </div>
           </div>
-
         </div>
 
+        {/* Our Misson */}
+        <div className="m-5 justify-center text-center">
+          <h1 className=" font-bold  text-3xl">
+            
+            Our Mission
+          </h1>
+          <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. A cupiditate quasi fugit. Distinctio voluptatum dicta sunt exercitationem adipisci consequatur nihil nisi officia qui voluptas quibusdam, rem molestiae cum. Fuga, error. </p>
+        </div>
+
+        {/*  Our Vision */}
+            
+        {/* Our Journey */}
+         <OurJourney/>
         {/* STATS */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-
           <StatCard icon={<FaUsers />} number="1000+" text="Students" />
 
           <StatCard icon={<FaBookOpen />} number="500+" text="Notes" />
@@ -64,7 +76,6 @@ export default function About() {
           <StatCard icon={<FaGraduationCap />} number="50+" text="Courses" />
 
           <StatCard icon={<FaGlobe />} number="10+" text="Cities" />
-
         </div>
 
         {/* FEATURES */}
@@ -75,7 +86,6 @@ export default function About() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
-
           <FeatureCard
             title="Quality Notes"
             desc="Access high quality study material anytime."
@@ -90,9 +100,7 @@ export default function About() {
             title="Easy Learning"
             desc="Simple and easy platform for everyone."
           />
-
         </div>
-
       </div>
     </section>
   );

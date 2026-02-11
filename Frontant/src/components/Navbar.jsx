@@ -74,14 +74,14 @@ export default function Navbar() {
                   STUDY
                 </h1>
 
-                <p className="text-[10px] lg:text-xs font-bold tracking-[0.35em] text-gray-500">
+                <p className="text-[10px] lg:text-xs font-bold tracking-[0.35em] text-black">
                   GROUP HUB
                 </p>
               </div>
             </div>
 
             {/* DESKTOP MENU */}
-            <div className="hidden lg:flex items-center gap-1 text-sm">
+            <div className="hidden lg:flex items-center gap-1 text-sm ">
               <NavLink
                 to="/"
                 className={({ isActive }) =>
