@@ -96,8 +96,8 @@ export default function About() {
                 students. We provide high-quality{" "}
                 <span className="text-purple-600 font-bold">
                   Handwritten Notes, E-books, and Previous Year Questions
-                </span>
-                absolutely free. We aim to ensure that no student’s academic
+                 </span>
+                 absolutely free. We aim to ensure that no student’s academic
                 potential is limited by a lack of expensive resources.
               </p>
               <div className="mt-6 flex flex-wrap gap-2">
@@ -132,7 +132,7 @@ export default function About() {
                 <h2 className="text-3xl font-bold text-gray-800">Our Vision</h2>
               </div>
               <p className="text-lg text-gray-600 leading-relaxed">
-                We envision a future where{" "}
+                We envision a future where {" "}
                 <span className="text-indigo-600 font-bold">
                   Study Group Hub
                 </span>

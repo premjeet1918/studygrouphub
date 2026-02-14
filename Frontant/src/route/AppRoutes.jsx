@@ -6,12 +6,14 @@ import Adminteam from "../pages/Team/Adminteam";
 import Devloperteam from "../pages/Team/Devloperteam";
 
 import Contact from "../pages/Contact/Contact";
+import Apkmianpage from "../pages/Apk/Apkmianpage";
 
 
 export default function AppRoutes() {
 return (
   <Routes>
     <Route path="/" element={<Home />} />
+    <Route path="/Apk" element={<Apkmianpage />} />
     <Route path="/About" element={<About />} />
     <Route path="/Adminteam" element={<Adminteam />} />
     <Route path="/Devloperteam" element={<Devloperteam />} />

@@ -5,6 +5,8 @@ import { FaUserShield, FaLaptopCode } from "react-icons/fa";
 import Adminteam from "../pages/Team/Adminteam";
 import Devloperteam from "../pages/Team/Devloperteam";
 
+
+
 import {
   FaEnvelope,
   FaFacebookF,
@@ -103,10 +105,15 @@ export default function Navbar() {
               </NavLink>
 
               {/* APK */}
-              <button className="flex items-center gap-2 px-4 py-2 rounded-xl cursor-pointer   hover:scale-105 transition ">
+              <NavLink
+                to="/Apk"
+                className={({ isActive }) =>
+                  `${navLinkClass} ${isActive ? activeClass : ""}`
+                }
+              >
                 <FaAndroid />
                 APK
-              </button>
+              </NavLink>
 
               {/* TEAM */}
               <div
