@@ -89,7 +89,7 @@ export default function Navbar() {
                 }
               >
                 <FaHome />
-                Home
+                HOME
               </NavLink>
 
               <NavLink
