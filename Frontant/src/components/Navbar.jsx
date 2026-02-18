@@ -2,8 +2,8 @@ import { useState } from "react";
 import Logo from "../assets/LOGO.JPG";
 import { NavLink, useNavigate } from "react-router-dom";
 import { FaUserShield, FaLaptopCode } from "react-icons/fa";
-import Adminteam from "../pages/Team/Adminteam";
-import Devloperteam from "../pages/Team/Devloperteam";
+import Adminmainpage from "../pages/Team/AdminTeam/Adminmainpage";
+import Devloperteammainpage from "../pages/Team/DevloperTeam/Devloperteammainpage";
 
 
 
@@ -140,7 +140,7 @@ export default function Navbar() {
                 >
                   <div className="p-2 space-y-1">
                     <NavLink
-                      to="/Devloperteam"
+                      to="/Devloperteammainpage"
                       className={({ isActive }) =>
                         `flex items-center gap-3 px-4 py-2 rounded-lg cursor-pointer transition-all duration-200 
                        ${isActive ? "bg-blue-100 text-blue-600" : "hover:bg-blue-50 hover:text-blue-600"}`
@@ -151,7 +151,7 @@ export default function Navbar() {
                     </NavLink>
 
                     <NavLink
-                      to="/Adminteam"
+                      to="/Adminmainpage"
                       className={({ isActive }) =>
                         `flex items-center gap-3 px-4 py-2 rounded-lg cursor-pointer transition-all duration-200 
                           ${isActive ? "bg-blue-100 text-blue-600" : "hover:bg-blue-50 hover:text-blue-600"}`

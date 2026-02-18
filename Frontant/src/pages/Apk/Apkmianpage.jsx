@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+
 // Aapke image imports
 import heroimage from "../Apk/img/hero.png";
 import feature from "../Apk/img/feature.png";
@@ -141,6 +142,8 @@ export default function NaxosLandingPage() {
         </div>
       </section>
       <ApkcardDownload />
+     
+      
       {/* Awesome Features Section */}
       <section id="features" className="py-28 bg-white relative">
         <div className="container mx-auto px-6">

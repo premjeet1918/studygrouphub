@@ -6,6 +6,7 @@ import CoreTeam from "./CoreTeam";
 import ChooseandOffer from "./ChooseandOffer";
 import Community from "./Community";
 
+
 export default function About() {
   return (
     <section className="relative py-16 sm:py-20 px-4 bg-gradient-to-br from-slate-50 via-purple-50 to-indigo-50 overflow-hidden">
@@ -159,6 +160,7 @@ export default function About() {
 
         {/* OTHER SECTIONS */}
         <OurJourney />
+      
         <CoreTeam />
 
         {/* STATS SECTION */}
@@ -188,6 +190,7 @@ export default function About() {
 
         <ChooseandOffer />
         <Community />
+
       </div>
     </section>
   );
