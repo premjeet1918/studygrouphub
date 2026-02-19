@@ -143,6 +143,7 @@ const AdminHero = () => {
           </span>
         </motion.div>
         <AdminTeam />
+        <JoinTeamSection/>
        
       </div>
     </section>

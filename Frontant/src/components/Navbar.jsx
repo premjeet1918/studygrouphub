@@ -2,8 +2,7 @@ import { useState } from "react";
 import Logo from "../assets/LOGO.JPG";
 import { NavLink, useNavigate } from "react-router-dom";
 import { FaUserShield, FaLaptopCode } from "react-icons/fa";
-import Adminmainpage from "../pages/Team/AdminTeam/Adminmainpage";
-import Devloperteammainpage from "../pages/Team/DevloperTeam/Devloperteammainpage";
+
 
 
 
@@ -115,54 +114,7 @@ export default function Navbar() {
                 APK
               </NavLink>
 
-              {/* TEAM */}
-              <div
-                className="relative"
-                onMouseEnter={() => setTeamOpen(true)}
-                onMouseLeave={() => setTeamOpen(false)}
-              >
-                <button className={navLinkClass}>
-                  <FaUsers />
-                  TEAM
-                  <FaChevronDown
-                    className={`text-xs transition ${
-                      teamOpen ? "rotate-180" : ""
-                    }`}
-                  />
-                </button>
-
-                <div
-                  className={`absolute top-12 left-0 w-52 bg-white shadow-xl rounded-xl border transition-all duration-300 ${
-                    teamOpen
-                      ? "opacity-100 visible translate-y-0"
-                      : "opacity-0 invisible -translate-y-2"
-                  }`}
-                >
-                  <div className="p-2 space-y-1">
-                    <NavLink
-                      to="/Devloperteammainpage"
-                      className={({ isActive }) =>
-                        `flex items-center gap-3 px-4 py-2 rounded-lg cursor-pointer transition-all duration-200 
-                       ${isActive ? "bg-blue-100 text-blue-600" : "hover:bg-blue-50 hover:text-blue-600"}`
-                      }
-                    >
-                      <FaLaptopCode />
-                      <span>DEVLOPER TEAM </span>
-                    </NavLink>
-
-                    <NavLink
-                      to="/Adminmainpage"
-                      className={({ isActive }) =>
-                        `flex items-center gap-3 px-4 py-2 rounded-lg cursor-pointer transition-all duration-200 
-                          ${isActive ? "bg-blue-100 text-blue-600" : "hover:bg-blue-50 hover:text-blue-600"}`
-                      }
-                    >
-                      <FaUserShield />
-                      <span>ADMIN TEAM</span>
-                    </NavLink>
-                  </div>
-                </div>
-              </div>
+             
 
               <NavLink
                 to="/courses"
