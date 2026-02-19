@@ -187,7 +187,7 @@ export default function Navbar() {
               {/* LOGIN */}
               <button className="ml-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-5 py-2 rounded-full hover:scale-105 hover:shadow-lg transition flex items-center gap-2">
                 <FaSignInAlt />
-                LOGIN
+                 <NavLink to="/login">LOGIN</NavLink>
               </button>
             </div>
 
