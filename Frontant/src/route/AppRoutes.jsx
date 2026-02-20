@@ -1,15 +1,15 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "../pages/Home";
 
 import About from "../pages/About/About";
 
 
 import Contact from "../pages/Contact/Contact";
 import Apkmianpage from "../pages/Apk/Apkmianpage";
-import Login from "../pages/Login";
-import Signup from "../pages/Signup";
-import ForgotPassword from "../pages/ForgotPassword";
-import OTPVerification from "../pages/OTPVerification";
+import Home from "../pages/Home/Home";
+import OTPVerification from "../pages/Auth/OTPVerification";
+import ForgotPassword from "../pages/Auth/ForgotPassword";
+import Signup from "../pages/Auth/Signup";
+import Login from "../pages/Auth/login";
 
 
 export default function AppRoutes() {
@@ -23,7 +23,7 @@ return (
     <Route path="/contact" element={<Contact />} />
     <Route path="/login" element={<Login />} />
 
-<Route path="/signup" element={<Signup />} />
+<Route path="/signup" element={<Signup/>} />
 
 <Route path="/forgot" element={<ForgotPassword/>} />
 

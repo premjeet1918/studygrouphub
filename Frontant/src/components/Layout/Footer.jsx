@@ -1,6 +1,6 @@
 
 import { motion } from "framer-motion";
-import Logo from "../assets/LOGO.JPG";
+import Logo from "../../assets/LOGO.JPG";
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
