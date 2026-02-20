@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Logo from "../../assets/LOGO.JPG";
+import Logo from "../../assets/images/LOGO.JPG";
 import { NavLink, useNavigate } from "react-router-dom";
 import { FaUserShield, FaLaptopCode } from "react-icons/fa";
 

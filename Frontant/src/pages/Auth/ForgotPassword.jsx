@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import Lock  from "../../assets/P.png"
+import Lock  from "../../assets/images/P.png"
 export default function ForgotPassword() {
   const navigate = useNavigate();
 

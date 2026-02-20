@@ -7,8 +7,8 @@ import {
   PlayCircle,
 } from "lucide-react";
 
-import BgImage from "../../assets/BG834.png";
-import StudentImage from "../../assets/NOCH983.png";
+import BgImage from "../../assets/images/BG834.PNG"
+import StudentImage from "../../assets/images/NOCH983.png";
 
 export default function Hero() {
   return (
