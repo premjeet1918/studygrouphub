@@ -4,9 +4,10 @@ import { motion } from "framer-motion";
 
 
 // Aapke image imports
-import heroimage from "../Apk/img/hero.png";
-import feature from "../Apk/img/feature.png";
-import simplae from "../Apk/img/single-image.jpg";
+
+import heroimage from "../../assets/images/hero.png";
+import feature from "../../assets/images/feature.png";
+import simplae from "../../assets/images/single-image.jpg";
 import ApkcardDownload from "./ApkcardDownload";
 
 import {

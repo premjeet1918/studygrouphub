@@ -3,8 +3,9 @@ import React from "react";
 import { motion } from "framer-motion";
 
 // Images Import
-import srhacker from "../Adminimg/srhacker.jpg";
-import rajsharma from "../Adminimg/raj.jpg";
+
+import srhacker from "../../assets/images/srhacker.jpg";
+import rajsharma from "../../assets/images/raj.jpg";
 
 import {
   Github,
