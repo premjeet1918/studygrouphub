@@ -119,7 +119,7 @@ export default function Navbar() {
               </NavLink>
               {/* FEEDBACK LINK */}
               <NavLink
-                to="/feedback"
+                to="/Feedback"
                 className={({ isActive }) =>
                   `${navLinkClass} ${isActive ? activeClass : ""}`
                 }
